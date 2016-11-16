@@ -1,0 +1,42 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Document upload</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list no-lines>
+    <ion-list-header>ภาพที่จะอัปโหลด</ion-list-header>
+    <ion-item *ngFor="let f of files">
+      <ion-thumbnail item-left>
+        <img src="data:image/png;base64,{{f.base64}}">
+      </ion-thumbnail>
+      <h2>{{ f.name }}</h2>
+      <p *ngIf="f.type == 1">OPD Card/ใบผลตรวจ</p>
+      <p *ngIf="f.type == 2">EKG</p>
+      <p *ngIf="f.type == 3">ใบส่งตัว (Refer)</p>
+      <p *ngIf="f.type == 4">เอกสารอื่นๆ</p>
+      <button (click)="remove(f)" clear ion-button item-right icon-only color="danger">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+
+<ion-fab top right edge>
+    <button (click)="doUpload()" color="danger" ion-fab><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
+
+ <ion-fab right bottom>
+    <button mini ion-fab color="secondary"><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab (click)="selectImage(1)"><ion-icon name="albums" color="primary"></ion-icon></button>
+      <button ion-fab (click)="selectImage(2)"><ion-icon name="barcode" color="danger"></ion-icon></button>
+      <button ion-fab (click)="selectImage(3)"><ion-icon name="car" color="secondary"></ion-icon></button>
+      <button ion-fab (click)="selectImage(4)"><ion-icon name="clipboard" color="dark"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

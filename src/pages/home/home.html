@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Main</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-searchbar (ionInput)="getPatient($event)"></ion-searchbar>
+
+  <div padding>
+    <ion-list no-lines>
+      <ion-list-header>
+        Patient(s)
+      </ion-list-header>
+      <button ion-item (click)="getVisit(patient)" *ngFor="let patient of patientResults">
+        <ion-avatar item-left>
+          <img src="./assets/imgs/avatar-ts-woody.png" alt="">
+        </ion-avatar>
+        <h4>{{ patient.fullname }}</h4>
+        <p>
+          CID: {{ patient.cid }},
+          ที่อยู่: {{ patient.address }}
+          </p>
+        <ion-note item-right>{{ patient.hn }}</ion-note>
+      </button>
+    </ion-list>
+  </div>
+</ion-content>

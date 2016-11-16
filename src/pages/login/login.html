@@ -1,0 +1,37 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Login</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="goSetting()">
+        <ion-icon name="settings"></ion-icon> 
+        &nbsp; Settings
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Please login
+    </ion-list-header>
+      <ion-item>
+        <ion-label floating >Username</ion-label>
+        <ion-input [(ngModel)]="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating >Password</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button (click)="doLogin()">
+          <ion-icon name="log-in"></ion-icon>
+          &nbsp; เข้าสู่ระบบ
+        </button>
+      </ion-item>
+  </ion-list>
+</ion-content>

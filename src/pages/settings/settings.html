@@ -1,0 +1,74 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Settings</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="save()">
+        <ion-icon name="create"></ion-icon> &nbsp; Save
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-list-header>HOSxP Connection</ion-list-header>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col width-50>
+          <ion-label fixed color="primary">Host</ion-label>
+          <ion-input type="text" placeholder="Hostname" [(ngModel)]="hos.host"></ion-input>
+        </ion-col>
+        <ion-col width-50>
+          <ion-label fixed color="primary">Database</ion-label>
+          <ion-input type="text" placeholder="Database" [(ngModel)]="hos.database"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>
+          <ion-label fixed color="primary">User</ion-label>
+          <ion-input type="text" placeholder="Username" [(ngModel)]="hos.user"></ion-input>
+        </ion-col>
+        <ion-col width-50>
+          <ion-label fixed color="primary">Password</ion-label>
+          <ion-input type="password" placeholder="Password" [(ngModel)]="hos.password"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>iDocs Connection</ion-list-header>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col width-50>
+          <ion-label fixed color="secondary">Host</ion-label>
+          <ion-input type="text" placeholder="Hostname" [(ngModel)]="idoc.host"></ion-input>
+        </ion-col>
+        <ion-col width-50>
+          <ion-label fixed color="secondary">Database</ion-label>
+          <ion-input type="text" placeholder="Database" [(ngModel)]="idoc.database"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>
+          <ion-label fixed color="secondary">User</ion-label>
+          <ion-input type="text" placeholder="Username" [(ngModel)]="idoc.user"></ion-input>
+        </ion-col>
+        <ion-col width-50>
+          <ion-label fixed color="secondary">Password</ion-label>
+          <ion-input type="password" placeholder="Password" [(ngModel)]="idoc.password"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{patient.fullname}}, HN: {{patient.hn}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+   <ion-list no-lines>
+      <ion-list-header>
+        Patient(s)
+      </ion-list-header>
+      <button ion-item (click)="showMenu()">
+        <ion-avatar item-left>
+          <img src="./assets/imgs/avatar-ts-woody.png" alt="">
+        </ion-avatar>
+        <h4>23 มกราคม 2559 13:00 น.</h4>
+        <p>
+          Dx: xxx sdfdslfjdslfjldskfjlkldsfs
+          </p>
+        <ion-note item-right>แผนกทันตกรรม</ion-note>
+      </button>
+      <button ion-item>
+        <ion-avatar item-left>
+          <img src="./assets/imgs/avatar-ts-jessie.png" alt="">
+        </ion-avatar>
+        <h4>xxxx</h4>
+        <p>sdfjsdlflfsdfdsf</p>
+        <ion-note item-right>xxx</ion-note>
+      </button>
+    </ion-list>
+</ion-content>
